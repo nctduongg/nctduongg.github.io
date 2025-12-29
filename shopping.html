@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shopping & Money - Leave the Lights On</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&family=Spline+Sans:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="assets/main.css">
+    <style>
+        body {
+            font-family: 'Spline Sans', 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+        }
+
+        .chapter-hero {
+            background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('img/shopping.avif');
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-with-title">
+                <a href="dive.html" class="nav-page-title">Dive Deeper</a>
+                <ul class="nav-menu">
+                    <li><a href="index.html#home">Home</a></li>
+                    <li><a href="speaking.html">Speaking & Workshop</a></li>
+                    <li><a href="aboutbook.html">About the Book</a></li>
+                    <li><a href="index.html#about-us">About Us</a></li>
+                    <li><a href="index.html#community">Join Our Community</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="chapter-hero">
+        <div class="container">
+            <div class="chapter-hero-content">
+                <h1>Chapter II: Shopping & Money</h1>
+            </div>
+        </div>
+    </section>
+
+    <!-- Content Section -->
+    <section class="chapter-content-section">
+        <div class="container">
+            <div class="chapter-text">
+                <h2>Email your bank:</h2>
+                <span class="subtitle">Email draft to your bank about where they stand on climate</span>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                    labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+                    laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in
+                    voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+
+                <h3>We buy carbon offsets from <a
+                        href="https://marketplace.goldstandard.org/collections/projects/clean-cooking">Gold Standard</a>
+                    to make our book carbon neutral!</h3>
+            </div>
+        </div>
+    </section>
+
+    <!-- Show Me the Math Section -->
+    <section class="math-section">
+        <div class="container">
+            <div class="math-widget">
+                <div class="math-header" onclick="toggleMath()">
+                    <h2>Show Me the Math!</h2>
+                    <span class="toggle-icon" id="toggleIcon">−</span>
+                </div>
+                <div class="math-content" id="mathContent">
+                    <p><strong>Lorem Ipsum Dolor Sit:</strong></p>
+                    <ul>
+                        <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit</li>
+                        <li>Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua</li>
+                        <li><strong>Ut enim:</strong> Ad minim veniam, quis nostrud exercitation ullamco</li>
+                    </ul>
+
+                    <p><strong>Laboris Nisi:</strong></p>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                        labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+                        laboris nisi ut aliquip ex ea commodo consequat!</p>
+
+                    <p><strong>Duis Aute Irure:</strong></p>
+                    <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+                        pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt
+                        mollit anim id est laborum.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Order Book Section -->
+    <section class="order-book-section">
+        <div class="container">
+            <div class="order-content">
+                <div class="book-cover">
+                    <img src="img/LeaveTheLightsOn_HC.png" alt="Leave The Light On Book Cover">
+                </div>
+                <div class="order-text">
+                    <div class="order-buttons">
+                        <a href="#" class="cta-button cta-primary">Order Now</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2025 All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        function toggleMath() {
+            const content = document.getElementById('mathContent');
+            const icon = document.getElementById('toggleIcon');
+
+            if (content.classList.contains('collapsed')) {
+                content.classList.remove('collapsed');
+                icon.textContent = '−';
+            } else {
+                content.classList.add('collapsed');
+                icon.textContent = '+';
+            }
+        }
+    </script>
+</body>
+
+</html>

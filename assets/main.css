@@ -34,7 +34,8 @@
     --color-white: #ffffff;
 
     /* Fonts */
-    --font-primary: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    --font-primary: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    --font-heading: 'Outfit', 'Helvetica Neue', Helvetica, Arial, sans-serif;
     --font-fallback: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
 
     /* Spacing */
@@ -68,6 +69,50 @@ body {
     color: var(--color-text-primary);
     background: linear-gradient(135deg, #FFE680 0%, var(--color-background) 50%, #A8D8FF 100%);
     background-attachment: fixed;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: var(--font-heading);
+    font-weight: 700;
+}
+
+/* Link Styles */
+a {
+    color: var(--color-blue-dark);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: var(--color-primary-blue);
+}
+
+a:visited {
+    color: #5a7d8a;
+}
+
+/* Content area links (within paragraphs) */
+.chapter-text a,
+.key-points a,
+p a {
+    color: var(--color-blue-dark);
+    text-decoration: underline;
+    text-decoration-color: rgba(67, 126, 142, 0.3);
+    text-decoration-thickness: 1.5px;
+    text-underline-offset: 2px;
+    transition: all 0.3s ease;
+}
+
+.chapter-text a:hover,
+.key-points a:hover,
+p a:hover {
+    color: var(--color-primary-blue);
+    text-decoration-color: var(--color-primary-blue);
 }
 
 .container {
@@ -214,13 +259,14 @@ body {
 
 .cta-secondary {
     background: var(--gradient-teal);
-    color: var(--color-white);
+    color: var(--color-white) !important;
     border: none;
     box-shadow: 0 6px 20px rgba(74, 144, 164, 0.3);
 }
 
 .cta-secondary:hover {
     background: linear-gradient(135deg, #3A7A8A 0%, #6BBEDB 100%);
+    color: var(--color-white) !important;
     transform: translateY(-3px);
     box-shadow: 0 8px 25px rgba(74, 144, 164, 0.4);
 }
@@ -946,6 +992,346 @@ html {
     background-color: #1a1a1a;
 }
 
+/* Chapter Pages */
+.chapter-hero {
+    padding: 6rem 0 5rem;
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('../img/food_banner.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    text-align: center;
+    position: relative;
+}
+
+.chapter-hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.3);
+    z-index: 0;
+}
+
+.chapter-hero-content {
+    position: relative;
+    z-index: 1;
+}
+
+.chapter-hero-content h1 {
+    font-size: 3.5rem;
+    font-weight: 700;
+    color: var(--color-white);
+    margin-bottom: 1rem;
+    letter-spacing: -0.02em;
+    text-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+}
+
+.chapter-subtitle {
+    font-size: 1.3rem;
+    color: var(--color-white);
+    max-width: 800px;
+    margin: 0 auto;
+    line-height: 1.6;
+    text-shadow: 0 1px 5px rgba(0, 0, 0, 0.5);
+}
+
+/* Fridge Makeover Section */
+.fridge-makeover-section {
+    padding: 5rem 0;
+    background: var(--color-white);
+}
+
+.makeover-title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: var(--color-text-primary);
+    text-align: center;
+    margin-bottom: 3rem;
+    letter-spacing: -0.01em;
+}
+
+.makeover-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.makeover-column {
+    text-align: center;
+}
+
+.makeover-label {
+    font-size: 1.8rem;
+    font-weight: 600;
+    color: var(--color-text-primary);
+    margin-bottom: 1.5rem;
+}
+
+.makeover-image {
+    background: var(--color-background);
+    border-radius: var(--radius-md);
+    overflow: hidden;
+    box-shadow: var(--shadow-lg);
+    transition: transform 0.3s ease;
+}
+
+.makeover-image:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
+}
+
+.makeover-image img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.chapter-content-section {
+    padding: 1rem 0 1rem;
+    background: var(--color-white);
+}
+
+.chapter-text {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.chapter-text h2 {
+    font-size: 2.2rem;
+    font-weight: 700;
+    color: var(--color-text-primary);
+    margin-bottom: 0.5rem;
+    letter-spacing: -0.01em;
+}
+
+.chapter-text .subtitle {
+    display: block;
+    font-size: 1.15rem;
+    font-style: italic;
+    color: rgba(44, 44, 44, 0.65);
+    margin-bottom: 1.5rem;
+    margin-top: 0.25rem;
+}
+
+.chapter-text h3 {
+    font-size: 1.6rem;
+    font-weight: 600;
+    color: var(--color-text-primary);
+    margin-top: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.chapter-text p {
+    font-size: 1.05rem;
+    line-height: 1.7;
+    color: var(--color-text-primary);
+    margin-bottom: 1.5rem;
+}
+
+.chapter-text iframe {
+    border-radius: var(--radius-sm);
+    box-shadow: var(--shadow-md);
+    width: 100%;
+    max-width: 800px;
+    height: 450px;
+    margin: 2rem auto;
+    display: block;
+}
+
+.key-points {
+    list-style: none;
+    padding: 0;
+    margin: 1.5rem 0;
+}
+
+.key-points li {
+    font-size: 1.05rem;
+    line-height: 1.7;
+    color: var(--color-text-primary);
+    margin-bottom: 1.2rem;
+    padding-left: 2rem;
+    position: relative;
+}
+
+.key-points li::before {
+    content: "→";
+    position: absolute;
+    left: 0;
+    color: var(--color-blue-dark);
+    font-weight: 700;
+    font-size: 1.2rem;
+}
+
+/* Workshop Widget Section */
+.workshop-widget-section {
+    padding: 3rem 0 0rem;
+    background: var(--color-white);
+}
+
+.workshop-widget {
+    max-width: 900px;
+    margin: 0 auto;
+    background: #E6F4F9;
+    border-left: 4px solid var(--color-primary-blue);
+    border-radius: var(--radius-sm);
+    box-shadow: var(--shadow-md);
+    overflow: hidden;
+}
+
+.workshop-header {
+    padding: 1.5rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+    user-select: none;
+}
+
+.workshop-header h2 {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: var(--color-text-primary);
+    margin: 0;
+    letter-spacing: -0.01em;
+}
+
+.workshop-content {
+    padding: 0 2rem 2rem;
+    max-height: 1000px;
+    overflow: hidden;
+    opacity: 1;
+    transition: max-height 0.5s ease, opacity 0.4s ease, padding 0.5s ease;
+}
+
+.workshop-content.collapsed {
+    max-height: 0;
+    opacity: 0;
+    padding: 0 2rem;
+}
+
+.workshop-content p {
+    font-size: 1.05rem;
+    line-height: 1.7;
+    color: var(--color-text-primary);
+    margin-bottom: 1rem;
+}
+
+.workshop-content ul {
+    list-style: none;
+    padding: 0;
+    margin: 1rem 0 1.5rem 1.5rem;
+}
+
+.workshop-content ul li {
+    font-size: 1.05rem;
+    line-height: 1.7;
+    color: var(--color-text-primary);
+    margin-bottom: 0.5rem;
+    padding-left: 1.5rem;
+    position: relative;
+}
+
+.workshop-content ul li::before {
+    content: "•";
+    position: absolute;
+    left: 0;
+    color: var(--color-primary-blue);
+    font-weight: 700;
+    font-size: 1.2rem;
+}
+
+/* Show Me the Math Section */
+.math-section {
+    padding: 1rem 0 4rem;
+    background: var(--color-white);
+}
+
+.math-widget {
+    max-width: 900px;
+    margin: 0 auto;
+    background: var(--color-yellow-soft);
+    border-left: 4px solid var(--color-primary-yellow);
+    border-radius: var(--radius-sm);
+    box-shadow: var(--shadow-md);
+    overflow: hidden;
+}
+
+.math-header {
+    padding: 1.5rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+    user-select: none;
+}
+
+
+.math-header h2 {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: var(--color-text-primary);
+    margin: 0;
+    letter-spacing: -0.01em;
+}
+
+.toggle-icon {
+    font-size: 2rem;
+    font-weight: 300;
+    color: var(--color-text-primary);
+    line-height: 1;
+    transition: transform 0.3s ease;
+}
+
+.math-content {
+    padding: 0 2rem 2rem;
+    max-height: 1000px;
+    overflow: hidden;
+    opacity: 1;
+    transition: max-height 0.5s ease, opacity 0.4s ease, padding 0.5s ease;
+}
+
+.math-content.collapsed {
+    max-height: 0;
+    opacity: 0;
+    padding: 0 2rem;
+}
+
+.math-content p {
+    font-size: 1.05rem;
+    line-height: 1.7;
+    color: var(--color-text-primary);
+    margin-bottom: 1rem;
+}
+
+.math-content ul {
+    list-style: none;
+    padding: 0;
+    margin: 1rem 0 1.5rem 1.5rem;
+}
+
+.math-content ul li {
+    font-size: 1.05rem;
+    line-height: 1.7;
+    color: var(--color-text-primary);
+    margin-bottom: 0.5rem;
+    padding-left: 1.5rem;
+    position: relative;
+}
+
+.math-content ul li::before {
+    content: "•";
+    position: absolute;
+    left: 0;
+    color: var(--color-primary-yellow);
+    font-weight: 700;
+    font-size: 1.2rem;
+}
+
 /* Order Book Section */
 .order-book-section {
     padding: 5rem 0;
@@ -1028,6 +1414,11 @@ html {
     }
 }
 
+/* ================== ABOUT THE BOOK PAGE ================== */
+.about-page {
+    background: var(--color-white);
+}
+
 /* ================== SPEAKING PAGE STYLES ================== */
 
 /* Nav with Page Title */
@@ -1043,6 +1434,12 @@ html {
     font-weight: 700;
     color: var(--color-text-primary);
     white-space: nowrap;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.nav-page-title:hover {
+    color: var(--color-blue-dark);
 }
 
 /* Speaking Hero Section */
@@ -1256,6 +1653,19 @@ html {
 
     .cta-box p {
         font-size: 1.2rem;
+    }
+
+    .makeover-grid {
+        grid-template-columns: 1fr;
+        gap: 2.5rem;
+    }
+
+    .makeover-title {
+        font-size: 2rem;
+    }
+
+    .makeover-label {
+        font-size: 1.5rem;
     }
 }
 
