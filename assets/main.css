@@ -34,7 +34,7 @@
     --color-white: #ffffff;
 
     /* Fonts */
-    --font-primary: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    --font-primary: 'Spline Sans', 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
     --font-heading: 'Outfit', 'Helvetica Neue', Helvetica, Arial, sans-serif;
     --font-fallback: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
 
@@ -574,6 +574,7 @@ section {
     gap: 2rem;
     max-width: 1400px;
     margin: 0 auto;
+    align-items: start;
 }
 
 .community-form-wrapper {
