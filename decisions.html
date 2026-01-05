@@ -52,11 +52,40 @@
     <section class="chapter-content-section">
         <div class="container">
             <div class="chapter-text">
-                <h3>US state map of carbon intensity of electricity, pounds of carbon per kWh</h3>
-                <p>Link</p>
+                <h3>Interactive flood map:</h3>
+                <iframe src="https://coast.noaa.gov/slr/#/layer/slr" title="NOAA Sea Level Rise Viewer" frameborder="0"
+                    allowfullscreen style="height: 600px; max-width: 1100px;"></iframe>
+                <p class="iframe-link">Source: <a href="https://coast.noaa.gov/slr/#/layer/slr"
+                        target="_blank">coast.noaa.gov/slr</a></p>
 
-                <h3>Ratings of North American cities on walkability, bikeability, transit quality</h3>
-                <p>Link</p>
+                <h3>US state map of carbon intensity of electricity, pounds of carbon per kWh:</h3>
+
+                <a href="https://en.wikipedia.org/wiki/List_of_U.S._states_by_renewable_electricity_production"
+                    target="_blank" class="article-preview-card">
+                    <div class="article-image">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/c/c9/US_generation_treemap_2022_source_state.png"
+                            alt="US Electricity Generation by State">
+                    </div>
+                    <div class="article-info">
+                        <h4>List of U.S. States by Renewable Electricity Production</h4>
+                        <p class="article-publisher">Wikipedia</p>
+                    </div>
+                </a>
+
+                <h3>Ratings of North American cities on walkability, bikeability, transit quality:</h3>
+
+                <a href="https://www.walkscore.com/cities-and-neighborhoods/" target="_blank"
+                    class="article-preview-card">
+                    <div class="article-image">
+                        <img src="https://pp3.walk.sc/_/s/_i/images/cities/us/San_Francisco.jpg"
+                            alt="Walk Score Cities">
+                    </div>
+                    <div class="article-info">
+                        <h4>Cities and Neighborhoods - Walk Score, Bike Score & Transit Score</h4>
+                        <p class="article-publisher">Walk Score</p>
+                    </div>
+                </a>
+
             </div>
         </div>
     </section>
@@ -65,31 +94,19 @@
     <section class="math-section">
         <div class="container">
             <div class="math-widget">
-                <div class="math-header" onclick="toggleMath()">
-                    <h2>Show Me the Math!</h2>
-                    <span class="toggle-icon" id="toggleIcon">−</span>
+                <div class="math-header">
+                    <h2>Show Me the Math</h2>
                 </div>
-                <div class="math-content" id="mathContent">
-                    <p><strong>Lorem Ipsum Dolor Sit:</strong></p>
-                    <ul>
-                        <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit</li>
-                        <li>Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua</li>
-                        <li><strong>Ut enim:</strong> Ad minim veniam, quis nostrud exercitation ullamco</li>
-                    </ul>
-
-                    <p><strong>Laboris Nisi:</strong></p>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-                        labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
-                        laboris nisi ut aliquip ex ea commodo consequat!</p>
-
-                    <p><strong>Duis Aute Irure:</strong></p>
-                    <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-                        pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt
-                        mollit anim id est laborum.
-                    </p>
+                <div class="math-content">
+                    <p> View the math behind this chapter <a
+                            href="https://docs.google.com/spreadsheets/d/19BPSV_cVWOfUDPTDCMZxaa05asU_4DnV1yIKfm5C39w/edit?gid=727900433#gid=727900433"
+                            class="math-link">here!</a></p>
                 </div>
             </div>
         </div>
+    </section>
+    </div>
+    </div>
     </section>
 
     <!-- Order Book Section -->
@@ -114,21 +131,6 @@
             <p>&copy; 2025 All rights reserved.</p>
         </div>
     </footer>
-
-    <script>
-        function toggleMath() {
-            const content = document.getElementById('mathContent');
-            const icon = document.getElementById('toggleIcon');
-
-            if (content.classList.contains('collapsed')) {
-                content.classList.remove('collapsed');
-                icon.textContent = '−';
-            } else {
-                content.classList.add('collapsed');
-                icon.textContent = '+';
-            }
-        }
-    </script>
 </body>
 
 </html>

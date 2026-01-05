@@ -69,28 +69,13 @@
     <section class="math-section">
         <div class="container">
             <div class="math-widget">
-                <div class="math-header" onclick="toggleMath()">
-                    <h2>Show Me the Math!</h2>
-                    <span class="toggle-icon" id="toggleIcon">−</span>
+                <div class="math-header">
+                    <h2>Show Me the Math</h2>
                 </div>
-                <div class="math-content" id="mathContent">
-                    <p><strong>Lorem Ipsum Dolor Sit:</strong></p>
-                    <ul>
-                        <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit</li>
-                        <li>Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua</li>
-                        <li><strong>Ut enim:</strong> Ad minim veniam, quis nostrud exercitation ullamco</li>
-                    </ul>
-
-                    <p><strong>Laboris Nisi:</strong></p>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-                        labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
-                        laboris nisi ut aliquip ex ea commodo consequat!</p>
-
-                    <p><strong>Duis Aute Irure:</strong></p>
-                    <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-                        pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt
-                        mollit anim id est laborum.
-                    </p>
+                <div class="math-content">
+                    <p> View the math behind this chapter <a
+                            href="docs.google.com/spreadsheets/d/19BPSV_cVWOfUDPTDCMZxaa05asU_4DnV1yIKfm5C39w"
+                            class="math-link">here!</a></p>
                 </div>
             </div>
         </div>
@@ -118,21 +103,6 @@
             <p>&copy; 2025 All rights reserved.</p>
         </div>
     </footer>
-
-    <script>
-        function toggleMath() {
-            const content = document.getElementById('mathContent');
-            const icon = document.getElementById('toggleIcon');
-
-            if (content.classList.contains('collapsed')) {
-                content.classList.remove('collapsed');
-                icon.textContent = '−';
-            } else {
-                content.classList.add('collapsed');
-                icon.textContent = '+';
-            }
-        }
-    </script>
 </body>
 
 </html>

@@ -82,51 +82,50 @@
     <section class="chapter-content-section">
         <div class="container">
             <div class="chapter-text">
-                <h3>Show link to ideas for hosting election parties</h3>
-                <p>Link</p>
+                <h3>How to host election parties: </h3>
+                <!-- <iframe
+                    src="img/2024_WWAV_PartyAtThePolls_HostGuide_Evergreen.pdf"
+                    title="Party at the Polls Host Guide" frameborder="0" style="height: 600px;"></iframe> -->
+                <p class="iframe-link">Source: <a
+                        href="https://whenweallvote.org/wp-content/uploads/2024/10/2024_WWAV_PartyAtThePolls_HostGuide_Evergreen.pdf"
+                        target="_blank">whenweallvote.org</a></p>
 
-                <h3>Show link to rules about distance to polling stations</h3>
-                <p>Link</p>
+                <h3>Rules about party distance to polling stations:</h3>
 
-                <h3>En-Roads link</h3>
-                <p>Link</p>
+                <a href="https://www.ncsl.org/elections-and-campaigns/electioneering-prohibitions" target="_blank"
+                    class="article-preview-card">
+                    <div class="article-image">
+                        <img src="https://images.ncsl.org/image/upload/c_fill,g_auto,w_1100/f_auto,q_auto/v1672964962/website/vote-here-polling-place-getty-478598956_2x.jpg"
+                            alt="Vote Here Polling Place">
+                    </div>
+                    <div class="article-info">
+                        <h4>Electioneering Prohibitions Near Polling Places</h4>
+                        <p class="article-publisher">National Conference of State Legislatures</p>
+                    </div>
+                </a>
 
-                <h3>Video of sardines evading sea lions:</h3>
+                <h3>The En-ROADS Climate Solutions Simulator:</h3>
+
+                <a href="https://www.climateinteractive.org/en-roads/" target="_blank" class="article-preview-card">
+                    <div class="article-image">
+                        <img src="https://imx.climateinteractive.org/eyJidWNrZXQiOiJpbWctY2xpbWF0ZWludGVyYWN0aXZlLW9yZyIsImtleSI6IjIwMjIvMDIvYmluZHUtaG9tZXBhZ2UzLXNjYWxlZC5qcGciLCJlZGl0cyI6eyJyZXNpemUiOnsid2lkdGgiOjE4MDAsImZpdCI6ImNvdmVyIn0sImpwZWciOmZhbHNlfX0="
+                            alt="En-ROADS Climate Simulator">
+                    </div>
+                    <div class="article-info">
+                        <h4>En-ROADS Climate Solutions Simulator</h4>
+                        <p class="article-publisher">Climate Interactive</p>
+                    </div>
+                </a>
+
+                <h3>Videos of sardines evading sea lions:</h3>
                 <iframe width="560" height="315" src="https://www.youtube.com/embed/6zOarcL1BSc?si=k3LW5QItr2mezKNB"
                     title="YouTube video player" frameborder="0"
                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                     referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-            </div>
-        </div>
-    </section>
-
-    <!-- Show Me the Math Section -->
-    <section class="math-section">
-        <div class="container">
-            <div class="math-widget">
-                <div class="math-header" onclick="toggleMath()">
-                    <h2>Show Me the Math!</h2>
-                    <span class="toggle-icon" id="toggleIcon">−</span>
-                </div>
-                <div class="math-content" id="mathContent">
-                    <p><strong>Lorem Ipsum Dolor Sit:</strong></p>
-                    <ul>
-                        <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit</li>
-                        <li>Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua</li>
-                        <li><strong>Ut enim:</strong> Ad minim veniam, quis nostrud exercitation ullamco</li>
-                    </ul>
-
-                    <p><strong>Laboris Nisi:</strong></p>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-                        labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
-                        laboris nisi ut aliquip ex ea commodo consequat!</p>
-
-                    <p><strong>Duis Aute Irure:</strong></p>
-                    <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-                        pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt
-                        mollit anim id est laborum.
-                    </p>
-                </div>
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/15B8qN9dre4?si=BuQYrg6L532jEfIQ"
+                    title="YouTube video player" frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
             </div>
         </div>
     </section>
@@ -158,19 +157,6 @@
         function toggleWorkshop() {
             const content = document.getElementById('workshopContent');
             const icon = document.getElementById('toggleWorkshopIcon');
-
-            if (content.classList.contains('collapsed')) {
-                content.classList.remove('collapsed');
-                icon.textContent = '−';
-            } else {
-                content.classList.add('collapsed');
-                icon.textContent = '+';
-            }
-        }
-
-        function toggleMath() {
-            const content = document.getElementById('mathContent');
-            const icon = document.getElementById('toggleIcon');
 
             if (content.classList.contains('collapsed')) {
                 content.classList.remove('collapsed');
