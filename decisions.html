@@ -11,15 +11,6 @@
         href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&family=Spline+Sans:wght@400;500;600;700&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="assets/main.css">
-    <style>
-        body {
-            font-family: 'Spline Sans', 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
-        }
-
-        .chapter-hero {
-            background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('img/decisions.jpg');
-        }
-    </style>
 </head>
 
 <body>
@@ -40,7 +31,8 @@
     </nav>
 
     <!-- Hero Section -->
-    <section class="chapter-hero">
+    <section class="chapter-hero"
+        style="background: linear-gradient(rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.25)), url('img/decision banner.jpg'); background-size: cover; background-position: center;">
         <div class="container">
             <div class="chapter-hero-content">
                 <h1>Chapter V: Major Life Decisions</h1>
@@ -48,65 +40,56 @@
         </div>
     </section>
 
-    <!-- Content Section -->
-    <section class="chapter-content-section">
-        <div class="container">
-            <div class="chapter-text">
-                <h3>Interactive flood map:</h3>
-                <iframe src="https://coast.noaa.gov/slr/#/layer/slr" title="NOAA Sea Level Rise Viewer" frameborder="0"
-                    allowfullscreen style="height: 600px; max-width: 1100px;"></iframe>
-                <p class="iframe-link">Source: <a href="https://coast.noaa.gov/slr/#/layer/slr"
-                        target="_blank">coast.noaa.gov/slr</a></p>
-
-                <h3>US state map of carbon intensity of electricity, pounds of carbon per kWh:</h3>
-
-                <a href="https://en.wikipedia.org/wiki/List_of_U.S._states_by_renewable_electricity_production"
-                    target="_blank" class="article-preview-card">
-                    <div class="article-image">
-                        <img src="https://upload.wikimedia.org/wikipedia/commons/c/c9/US_generation_treemap_2022_source_state.png"
-                            alt="US Electricity Generation by State">
-                    </div>
-                    <div class="article-info">
-                        <h4>List of U.S. States by Renewable Electricity Production</h4>
-                        <p class="article-publisher">Wikipedia</p>
-                    </div>
-                </a>
-
-                <h3>Ratings of North American cities on walkability, bikeability, transit quality:</h3>
-
-                <a href="https://www.walkscore.com/cities-and-neighborhoods/" target="_blank"
-                    class="article-preview-card">
-                    <div class="article-image">
-                        <img src="https://pp3.walk.sc/_/s/_i/images/cities/us/San_Francisco.jpg"
-                            alt="Walk Score Cities">
-                    </div>
-                    <div class="article-info">
-                        <h4>Cities and Neighborhoods - Walk Score, Bike Score & Transit Score</h4>
-                        <p class="article-publisher">Walk Score</p>
-                    </div>
-                </a>
-
-            </div>
-        </div>
-    </section>
-
-    <!-- Show Me the Math Section -->
-    <section class="math-section">
-        <div class="container">
-            <div class="math-widget">
-                <div class="math-header">
-                    <h2>Show Me the Math</h2>
+    <!-- Content Section - Grid Layout -->
+    <section class="decisions-grid-section">
+        <div class="decisions-grid">
+            <!-- Item 1 - Show Me The Math (Top Left) -->
+            <a href="https://docs.google.com/spreadsheets/d/19BPSV_cVWOfUDPTDCMZxaa05asU_4DnV1yIKfm5C39w/edit?gid=727900433#gid=727900433"
+                target="_blank" class="grid-item">
+                <div class="grid-item-bg" style="background-image: url('img/calculator.jpg');">
                 </div>
-                <div class="math-content">
-                    <p> View the math behind this chapter <a
-                            href="https://docs.google.com/spreadsheets/d/19BPSV_cVWOfUDPTDCMZxaa05asU_4DnV1yIKfm5C39w/edit?gid=727900433#gid=727900433"
-                            class="math-link">here!</a></p>
+                <div class="grid-item-overlay"></div>
+                <div class="grid-item-content">
+                    <h2 class="grid-item-title">Show Me The Math!</h2>
                 </div>
-            </div>
+            </a>
+
+            <!-- Item 2 - Interactive Flood Map -->
+            <a href="https://coast.noaa.gov/slr/#/layer/slr" target="_blank" class="grid-item">
+                <div class="grid-item-bg" style="background-image: url('img/noaa sea level.png');">
+                </div>
+                <div class="grid-item-overlay"></div>
+                <div class="grid-item-content">
+                    <h2 class="grid-item-title">Interactive Flood Map</h2>
+                    <p class="grid-item-subtitle">NOAA Sea Level Rise Viewer</p>
+                </div>
+            </a>
+
+            <!-- Item 3 - Carbon Intensity Map -->
+            <a href="https://en.wikipedia.org/wiki/List_of_U.S._states_by_renewable_electricity_production"
+                target="_blank" class="grid-item">
+                <div class="grid-item-bg"
+                    style="background-image: url('https://upload.wikimedia.org/wikipedia/commons/c/c9/US_generation_treemap_2022_source_state.png');">
+                </div>
+                <div class="grid-item-overlay"></div>
+                <div class="grid-item-content">
+                    <h2 class="grid-item-title">Carbon Intensity of Electricity</h2>
+                    <p class="grid-item-subtitle">U.S. States by Renewable Electricity - Wikipedia</p>
+                </div>
+            </a>
+
+            <!-- Item 4 - Walkability Ratings -->
+            <a href="https://www.walkscore.com/cities-and-neighborhoods/" target="_blank" class="grid-item">
+                <div class="grid-item-bg"
+                    style="background-image: url('https://pp3.walk.sc/_/s/_i/images/cities/us/San_Francisco.jpg');">
+                </div>
+                <div class="grid-item-overlay"></div>
+                <div class="grid-item-content">
+                    <h2 class="grid-item-title">City Walkability & Transit Ratings</h2>
+                    <p class="grid-item-subtitle">Walk Score</p>
+                </div>
+            </a>
         </div>
-    </section>
-    </div>
-    </div>
     </section>
 
     <!-- Order Book Section -->
@@ -118,7 +101,21 @@
                 </div>
                 <div class="order-text">
                     <div class="order-buttons">
-                        <a href="#" class="cta-button cta-primary">Order Now</a>
+                        <div class="dropdown-order-button">
+                            <button class="cta-button cta-primary dropdown-trigger">
+                                Pre-order Now <span class="dropdown-arrow">▼</span>
+                            </button>
+                            <div class="dropdown-menu">
+                                <a href="https://www.penguinrandomhouse.com/books/773541/leave-the-lights-on-by-elizabeth-dunn-and-jiaying-zhao/"
+                                    class="dropdown-item" target="_blank" rel="noopener noreferrer">
+                                    <span class="flag">🇺🇸</span> United States
+                                </a>
+                                <a href="https://www.penguinrandomhouse.ca/books/773541/leave-the-lights-on-by-elizabeth-dunn-and-jiaying-zhao/9780593853276"
+                                    class="dropdown-item" target="_blank" rel="noopener noreferrer">
+                                    <span class="flag">🇨🇦</span> Canada
+                                </a>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
