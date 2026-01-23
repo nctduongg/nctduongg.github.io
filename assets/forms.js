@@ -1,9 +1,9 @@
 // EmailJS Form Handling
 // After signing up at emailjs.com, replace these with your actual IDs:
 const EMAILJS_CONFIG = {
-    serviceId: 'YOUR_SERVICE_ID',      // e.g., 'service_abc123'
-    communityTemplateId: 'YOUR_COMMUNITY_TEMPLATE_ID',  // e.g., 'template_xyz789'
-    mediaTemplateId: 'YOUR_MEDIA_TEMPLATE_ID'           // e.g., 'template_def456'
+    serviceId: 'service_zkimrql',      // e.g., 'service_abc123'
+    communityTemplateId: 'template_ll3lbw6',  // e.g., 'template_xyz789'
+    mediaTemplateId: 'template_h9wonzi'           // e.g., 'template_def456'
 };
 
 // Community Form Handler
