@@ -44,42 +44,51 @@
         </div>
     </section>
 
-    <!-- JZ's Fridge Makeover Section -->
-    <section class="fridge-makeover-section">
-        <div class="container">
-            <h2 class="makeover-title">JZ's fridge makeover</h2>
-            <div class="makeover-grid">
-                <div class="makeover-column">
-                    <h3 class="makeover-label">Before</h3>
-                    <div class="makeover-image">
-                        <img src="img/fridge_placeholder.webp" alt="JZ's Fridge Before">
-                    </div>
+    <!-- Grid Section -->
+    <section class="chapter-grid-section">
+        <div class="chapter-grid">
+            <!-- Item 1 - Show Me The Math -->
+            <a href="https://docs.google.com/spreadsheets/d/19BPSV_cVWOfUDPTDCMZxaa05asU_4DnV1yIKfm5C39w"
+                target="_blank" class="grid-item">
+                <div class="grid-item-bg" style="background-image: url('img/calculator.jpg');">
                 </div>
-                <div class="makeover-column">
-                    <h3 class="makeover-label">After</h3>
-                    <div class="makeover-image">
-                        <img src="img/fridge_placeholder.webp" alt="JZ's Fridge After">
-                    </div>
+                <div class="grid-item-overlay"></div>
+                <div class="grid-item-content">
+                    <h2 class="grid-item-title">Show Me The Math!</h2>
                 </div>
-            </div>
+            </a>
+
+            <!-- Item 2 - JZ's Fridge Makeover -->
+            <a href="#" class="grid-item" onclick="openFridgeModal(event)">
+                <div class="grid-item-bg" style="background-image: url('img/fridge_placeholder.webp');">
+                </div>
+                <div class="grid-item-overlay"></div>
+                <div class="grid-item-content">
+                    <h2 class="grid-item-title">JZ's Fridge Makeover</h2>
+                    <p class="grid-item-subtitle">Click here to see the transformation!</p>
+                </div>
+            </a>
         </div>
     </section>
 
-    <!-- Show Me the Math Section -->
-    <section class="math-section">
-        <div class="container">
-            <div class="math-widget">
-                <div class="math-header">
-                    <h2>Show Me the Math</h2>
-                </div>
-                <div class="math-content">
-                    <p> View the math behind this chapter <a
-                            href="docs.google.com/spreadsheets/d/19BPSV_cVWOfUDPTDCMZxaa05asU_4DnV1yIKfm5C39w"
-                            class="math-link">here!</a></p>
+    <!-- Fridge Modal -->
+    <div id="fridgeModal" class="fridge-modal">
+        <div class="fridge-modal-content">
+            <span class="fridge-modal-close" onclick="closeFridgeModal()">&times;</span>
+            <div class="flip-container" id="flipContainer" onclick="flipImage()">
+                <div class="flipper">
+                    <div class="flip-front">
+                        <img src="img/fridge_placeholder.webp" alt="JZ's Fridge Before">
+                        <p class="flip-label">Before</p>
+                    </div>
+                    <div class="flip-back">
+                        <img src="img/fridge_placeholder.webp" alt="JZ's Fridge After">
+                        <p class="flip-label">After!</p>
+                    </div>
                 </div>
             </div>
         </div>
-    </section>
+    </div>
 
     <!-- Order Book Section -->
     <section class="order-book-section">
@@ -117,6 +126,8 @@
             <p>&copy; 2026 Leave the Lights On. All rights reserved.</p>
         </div>
     </footer>
+
+    <script src="assets/main.js"></script>
 </body>
 
 </html>
