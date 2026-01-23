@@ -1315,6 +1315,7 @@ html {
     font-weight: 700;
     font-size: 1.2rem;
 }
+
 .email-draft p {
     font-size: 1.5rem;
     line-height: 1.5;
@@ -1487,6 +1488,49 @@ html {
     flex-direction: column;
     gap: 1.5rem;
     align-items: center;
+}
+
+/* About Us Page - Speaker Sections (Horizontal Layout) */
+.about-speaker-section {
+    padding: 2rem 0;
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(10px);
+}
+
+.about-speaker-card {
+    display: flex;
+    flex-direction: row;
+    gap: 2rem;
+    align-items: flex-start;
+}
+
+.about-speaker-card .speaker-image-block {
+    width: 300px;
+    min-width: 300px;
+    aspect-ratio: 1;
+    overflow: hidden;
+    border-radius: var(--radius-sm);
+    box-shadow: var(--shadow-md);
+}
+
+.about-speaker-card .speaker-info {
+    text-align: left;
+    flex: 1;
+}
+
+.about-speaker-card .speaker-info h4 {
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--color-text-primary);
+    margin-bottom: 1rem;
+}
+
+.about-speaker-card .speaker-info p {
+    font-size: 1rem;
+    font-weight: 400;
+    color: var(--color-text-primary);
+    text-align: left;
+    line-height: 1.7;
 }
 
 /* Keep old styles for backwards compatibility */
@@ -1679,6 +1723,16 @@ html {
     .speaker-card-full {
         flex-direction: column;
         gap: 1.5rem;
+    }
+
+    .about-speaker-card {
+        flex-direction: column;
+        gap: 1.5rem;
+    }
+
+    .about-speaker-card .speaker-image-block {
+        width: 100%;
+        min-width: unset;
     }
 
     .speakers-grid {
