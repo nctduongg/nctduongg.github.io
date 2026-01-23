@@ -1,0 +1,117 @@
+// EmailJS Form Handling
+// After signing up at emailjs.com, replace these with your actual IDs:
+const EMAILJS_CONFIG = {
+    serviceId: 'YOUR_SERVICE_ID',      // e.g., 'service_abc123'
+    communityTemplateId: 'YOUR_COMMUNITY_TEMPLATE_ID',  // e.g., 'template_xyz789'
+    mediaTemplateId: 'YOUR_MEDIA_TEMPLATE_ID'           // e.g., 'template_def456'
+};
+
+// Community Form Handler
+document.getElementById('communityForm').addEventListener('submit', function (event) {
+    event.preventDefault();
+
+    const form = event.target;
+    const submitButton = form.querySelector('.submit-button');
+    const statusDiv = form.querySelector('.form-status');
+
+    // Disable button and show loading
+    submitButton.disabled = true;
+    submitButton.textContent = 'Sending...';
+
+    // Send email via EmailJS
+    emailjs.sendForm(EMAILJS_CONFIG.serviceId, EMAILJS_CONFIG.communityTemplateId, form)
+        .then(function (response) {
+            console.log('SUCCESS!', response.status, response.text);
+
+            // Show success message
+            statusDiv.style.display = 'block';
+            statusDiv.style.backgroundColor = '#d4edda';
+            statusDiv.style.color = '#155724';
+            statusDiv.style.border = '1px solid #c3e6cb';
+            statusDiv.textContent = '🎉 Thank you for subscribing! Check your email for confirmation.';
+
+            // Reset form
+            form.reset();
+
+            // Reset button after delay
+            setTimeout(() => {
+                submitButton.disabled = false;
+                submitButton.textContent = 'Subscribe';
+                statusDiv.style.display = 'none';
+            }, 5000);
+
+        }, function (error) {
+            console.error('FAILED...', error);
+
+            // Show error message
+            statusDiv.style.display = 'block';
+            statusDiv.style.backgroundColor = '#f8d7da';
+            statusDiv.style.color = '#721c24';
+            statusDiv.style.border = '1px solid #f5c6cb';
+            statusDiv.textContent = '❌ Oops! Something went wrong. Please try again or email us directly.';
+
+            // Reset button
+            submitButton.disabled = false;
+            submitButton.textContent = 'Subscribe';
+
+            // Hide error after delay
+            setTimeout(() => {
+                statusDiv.style.display = 'none';
+            }, 8000);
+        });
+});
+
+// Media Inquiries Form Handler
+document.getElementById('mediaForm').addEventListener('submit', function (event) {
+    event.preventDefault();
+
+    const form = event.target;
+    const submitButton = form.querySelector('.submit-button');
+    const statusDiv = form.querySelector('.form-status');
+
+    // Disable button and show loading
+    submitButton.disabled = true;
+    submitButton.textContent = 'Sending...';
+
+    // Send email via EmailJS
+    emailjs.sendForm(EMAILJS_CONFIG.serviceId, EMAILJS_CONFIG.mediaTemplateId, form)
+        .then(function (response) {
+            console.log('SUCCESS!', response.status, response.text);
+
+            // Show success message
+            statusDiv.style.display = 'block';
+            statusDiv.style.backgroundColor = '#d4edda';
+            statusDiv.style.color = '#155724';
+            statusDiv.style.border = '1px solid #c3e6cb';
+            statusDiv.textContent = '🎉 Thank you for your inquiry! We\'ll get back to you soon.';
+
+            // Reset form
+            form.reset();
+
+            // Reset button after delay
+            setTimeout(() => {
+                submitButton.disabled = false;
+                submitButton.textContent = 'Submit';
+                statusDiv.style.display = 'none';
+            }, 5000);
+
+        }, function (error) {
+            console.error('FAILED...', error);
+
+            // Show error message
+            statusDiv.style.display = 'block';
+            statusDiv.style.backgroundColor = '#f8d7da';
+            statusDiv.style.color = '#721c24';
+            statusDiv.style.border = '1px solid #f5c6cb';
+            statusDiv.textContent = '❌ Oops! Something went wrong. Please try again or email us directly.';
+
+            // Reset button
+            submitButton.disabled = false;
+            submitButton.textContent = 'Submit';
+
+            // Hide error after delay
+            setTimeout(() => {
+                statusDiv.style.display = 'none';
+            }, 8000);
+        });
+});
