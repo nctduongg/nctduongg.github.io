@@ -28,7 +28,7 @@ document.getElementById('communityForm').addEventListener('submit', function (ev
             statusDiv.style.backgroundColor = '#d4edda';
             statusDiv.style.color = '#155724';
             statusDiv.style.border = '1px solid #c3e6cb';
-            statusDiv.textContent = '🎉 Thank you for subscribing! Check your email for confirmation.';
+            statusDiv.textContent = '🎉 Thank you for subscribing! We\'ll be in touch.';
 
             // Reset form
             form.reset();
@@ -83,7 +83,7 @@ document.getElementById('mediaForm').addEventListener('submit', function (event)
             statusDiv.style.backgroundColor = '#d4edda';
             statusDiv.style.color = '#155724';
             statusDiv.style.border = '1px solid #c3e6cb';
-            statusDiv.textContent = '🎉 Thank you for your inquiry! We\'ll get back to you soon.';
+            statusDiv.textContent = '🎉 Thank you for your inquiry! We received your message and will respond soon.';
 
             // Reset form
             form.reset();

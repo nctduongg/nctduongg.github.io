@@ -129,13 +129,23 @@ p a:hover {
 
 /* Navigation */
 .navbar {
-    background-color: rgba(255, 255, 255, 0.98);
+    background-color: transparent;
     padding: 1.5rem 0;
-    box-shadow: var(--shadow-sm);
-    position: sticky;
+    box-shadow: none;
+    position: fixed;
     top: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
     z-index: 100;
-    backdrop-filter: blur(10px);
+    transition: all 0.4s ease;
+}
+
+/* Scrolled state - opaque dark background */
+.navbar.scrolled {
+    background-color: rgba(59, 101, 112, 0.80);
+    /* backdrop-filter: blur(10px); */
+    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.15);
 }
 
 .nav-menu {
@@ -154,6 +164,15 @@ p a:hover {
     font-family: var(--font-primary);
     transition: all 0.3s ease;
     position: relative;
+}
+
+/* Bright text when navbar is scrolled */
+.navbar.scrolled .nav-menu a {
+    color: #ffffff;
+}
+
+.navbar.scrolled .nav-menu a:hover {
+    color: var(--color-primary-blue);
 }
 
 .nav-menu a::after {
@@ -379,7 +398,7 @@ section {
 }
 
 .section-text p {
-    font-size: 1.2rem;
+    font-size: 1.5rem;
     color: var(--color-text-secondary);
     line-height: 1.8;
     max-width: 600px;
@@ -424,14 +443,14 @@ section {
 }
 
 .about-us .section-text h2 {
-    font-size: 2.5rem;
+    font-size: 3rem;
     margin-bottom: 1rem;
 }
 
 .about-us .section-text p {
     margin-bottom: var(--spacing-sm);
     line-height: 1.8;
-    font-size: 0.88rem;
+    font-size: 1.3rem;
 }
 
 .about-us .section-text p:last-of-type {
@@ -447,7 +466,7 @@ section {
 
 .overview-content {
     max-width: 1100px;
-    margin: 0 auto;
+    margin: 30px auto;
     padding: 0 20px;
 }
 
@@ -469,7 +488,7 @@ section {
 }
 
 .overview-content p {
-    font-size: 1.05rem;
+    font-size: 1.2rem;
     line-height: 1.7;
     color: var(--color-text-primary);
     margin-bottom: 1rem;
@@ -654,7 +673,7 @@ section {
 
 .forms-container {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr;
     gap: 2rem;
     max-width: 1400px;
     margin: 0 auto;
@@ -1479,9 +1498,19 @@ html {
     backdrop-filter: blur(10px);
 }
 
-/* .speaker-section-individual:nth-child(odd) {
-    background: transparent;
-} */
+.speaker-section-individual>p {
+    text-align: center;
+    font-size: 1.4rem;
+    padding-bottom: 3rem;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.email-address {
+    font-size: 1.5rem;
+    text-decoration: underline;
+    font-weight: 600;
+}
 
 .speaker-card-full {
     display: flex;
@@ -1495,6 +1524,10 @@ html {
     padding: 2rem 0;
     background: rgba(255, 255, 255, 0.95);
     backdrop-filter: blur(10px);
+}
+
+.first-section {
+    padding-top: 100px;
 }
 
 .about-speaker-card {
@@ -1531,6 +1564,31 @@ html {
     color: var(--color-text-primary);
     text-align: left;
     line-height: 1.7;
+}
+
+.speaker-social-links {
+    display: flex;
+    gap: 1rem;
+    margin-top: 1.5rem;
+    align-items: center;
+}
+
+.speaker-social-links a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.speaker-social-links a:hover {
+    transform: translateY(-3px);
+    opacity: 0.8;
+}
+
+.speaker-social-links .social-icon {
+    width: 32px;
+    height: 32px;
+    object-fit: contain;
 }
 
 /* Keep old styles for backwards compatibility */
@@ -1609,95 +1667,6 @@ html {
 
 .stern-link:hover {
     color: var(--color-primary-blue);
-}
-
-/* Speaking CTA Section */
-.speaking-cta-section {
-    padding: 3rem 0 5rem;
-    background: transparent;
-}
-
-.cta-grid {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 2rem;
-    max-width: 1100px;
-    margin: 0 auto;
-}
-
-.cta-box {
-    background: var(--gradient-teal);
-    padding: 3rem 2.5rem;
-    border-radius: var(--radius-sm);
-    box-shadow: var(--shadow-md);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    min-height: 180px;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    cursor: pointer;
-    position: relative;
-    overflow: hidden;
-}
-
-.cta-diy {
-    background-image: url('../img/home_background.jpg');
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-}
-
-.cta-overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(62, 112, 120, 0.5);
-    transition: background-color 0.3s ease;
-}
-
-.cta-diy:hover .cta-overlay {
-    background-color: rgba(62, 112, 120, 0.75);
-}
-
-.cta-box:hover {
-    transform: translateY(-5px);
-    box-shadow: var(--shadow-lg);
-}
-
-.cta-box p {
-    font-size: 1.3rem;
-    font-weight: 400;
-    color: var(--color-white);
-    text-align: center;
-    line-height: 1.5;
-    margin: 0;
-    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
-}
-
-.email-address {
-    font-size: 1.5rem;
-    text-decoration: underline;
-    font-weight: 600;
-}
-
-.cta-diy a {
-    text-decoration: none;
-    color: inherit;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 100%;
-    height: 100%;
-    position: relative;
-    z-index: 1;
-}
-
-.cta-diy p {
-    font-weight: 700;
-    font-size: 1.8rem;
-    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
 }
 
 /* Responsive Styles for Speaking Page */
