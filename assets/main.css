@@ -198,6 +198,67 @@ p a:hover {
     width: 100%;
 }
 
+/* Hamburger Menu Icon */
+.hamburger {
+    display: none;
+    flex-direction: column;
+    gap: 5px;
+    cursor: pointer;
+    padding: 10px;
+    background: none;
+    border: none;
+    z-index: 101;
+}
+
+.hamburger span {
+    display: block;
+    width: 24px;
+    height: 2px;
+    background-color: var(--color-text-primary);
+    transition: all 0.3s ease;
+    border-radius: 2px;
+}
+
+.navbar.scrolled .hamburger span {
+    background-color: #ffffff;
+}
+
+.hamburger.active span:nth-child(1) {
+    transform: rotate(45deg) translate(6px, 6px);
+}
+
+.hamburger.active span:nth-child(2) {
+    opacity: 0;
+}
+
+.hamburger.active span:nth-child(3) {
+    transform: rotate(-45deg) translate(7px, -7px);
+}
+
+/* Mobile Menu Overlay */
+.mobile-menu-overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 99;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.mobile-menu-overlay.active {
+    display: block;
+    opacity: 1;
+}
+
+/* Prevent body scroll when menu is open */
+body.menu-open {
+    overflow: hidden;
+}
+
 /* Hero Section */
 .hero {
     padding: 6rem 0 4rem;
@@ -387,25 +448,6 @@ section {
     gap: 5rem;
 }
 
-.section-text {
-    flex: 1;
-}
-
-.section-text h2 {
-    font-size: 3rem;
-    margin-bottom: 1.5rem;
-    color: var(--color-text-primary);
-    font-weight: 700;
-    letter-spacing: -0.02em;
-}
-
-.section-text p {
-    font-size: 1.5rem;
-    color: var(--color-text-secondary);
-    line-height: 1.8;
-    max-width: 600px;
-}
-
 /* About Us Section */
 .about-us {
     background-color: var(--color-background);
@@ -414,7 +456,7 @@ section {
 .about-us .container {
     max-width: 1300px;
     margin: 0 auto;
-    padding: 0 0px;
+    padding: 0 20px;
 }
 
 .about-us .section-content {
@@ -426,6 +468,7 @@ section {
     flex-shrink: 0;
     transition: transform 0.3s ease;
     margin-top: 5rem;
+    margin-bottom: 0;
 }
 
 .author-photo img {
@@ -452,7 +495,9 @@ section {
 .about-us .section-text p {
     margin-bottom: var(--spacing-sm);
     line-height: 1.8;
-    font-size: 1.3rem;
+    font-size: 1.2rem;
+    text-align: justify;
+    padding: 0 10px;
 }
 
 .about-us .section-text p:last-of-type {
@@ -1796,6 +1841,16 @@ html {
 @media (max-width: 768px) {
 
     /* General Layout & Container */
+    .navbar {
+        padding: 1rem 0;
+    }
+
+    .navbar .container {
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+    }
+
     .container {
         padding: 0 20px;
     }
@@ -1805,16 +1860,62 @@ html {
     }
 
     /* Navigation */
+    .hamburger {
+        display: flex;
+    }
+
     .nav-menu {
-        justify-content: center;
-        gap: 1.5rem;
-        font-size: 0.9rem;
+        position: fixed;
+        top: 0;
+        right: -100%;
+        width: 280px;
+        height: 100vh;
+        background: rgba(255, 255, 255, 0.98);
+        backdrop-filter: blur(10px);
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: stretch;
+        padding: 80px 0 20px;
+        gap: 0;
+        box-shadow: -2px 0 10px rgba(0, 0, 0, 0.1);
+        transition: right 0.3s ease;
+        z-index: 100;
+        overflow-y: auto;
+    }
+
+    .nav-menu.active {
+        right: 0;
+    }
+
+    .nav-menu li {
+        width: 100%;
+        border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    }
+
+    .nav-menu a {
+        display: block;
+        padding: 1.2rem 2rem;
+        color: var(--color-text-primary) !important;
+        font-size: 1.1rem;
+        text-align: left;
+    }
+
+    .navbar.scrolled .nav-menu a {
+        color: var(--color-text-primary) !important;
+    }
+
+    .nav-menu a::after {
+        display: none;
+    }
+
+    .nav-menu a:hover {
+        background: rgba(135, 206, 235, 0.1);
     }
 
     .nav-with-title {
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 1rem;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
     }
 
     .nav-page-title {
@@ -1888,11 +1989,18 @@ html {
         width: 300px;
     }
 
-    .author-photo,
+    .author-photo {
+        width: 100%;
+        max-width: 450px;
+        height: 250px;
+        margin: 0 auto;
+    }
+
     .book-info {
         width: 100%;
-        max-width: 320px;
-        height: 320px;
+        max-width: 450px;
+        height: 450px;
+        margin: 0 auto;
     }
 
     /* Grid Layouts */
@@ -2008,119 +2116,5 @@ html {
     .fridge-modal-close {
         top: -30px;
         font-size: 30px;
-    }
-}
-
-/* ============================================
-   MOBILE RESPONSIVE STYLES - 480px
-   ============================================ */
-
-@media (max-width: 480px) {
-
-    /* Hero Text Sizing */
-    .hero-text h1 {
-        font-size: 2rem;
-    }
-
-    .hero-text h2 {
-        font-size: 1.5rem;
-    }
-
-    .speaking-hero {
-        padding: 4rem 0 3rem;
-    }
-
-    .speaking-hero h1 {
-        font-size: 2rem;
-    }
-
-    .hero-subtitle {
-        font-size: 1rem;
-    }
-
-    /* Buttons */
-    .hero-buttons {
-        justify-content: center;
-    }
-
-    .cta-button {
-        padding: 0.9rem 2rem;
-        font-size: 1rem;
-    }
-
-    .cta-box {
-        padding: 2rem 1.5rem;
-        min-height: 130px;
-    }
-
-    .cta-box p {
-        font-size: 1.1rem;
-    }
-
-    /* Chapters & Workshop */
-    .chapters-grid {
-        grid-template-columns: 1fr;
-    }
-
-    .chapter-tile {
-        padding: 2rem 1.5rem;
-    }
-
-    .workshop-content h2 {
-        font-size: 2rem;
-    }
-
-    .workshop-content p {
-        font-size: 1rem;
-    }
-
-    /* Speaker Content */
-    .speaker-color-block h3 {
-        font-size: 1.5rem;
-    }
-
-    .speaker-info h4 {
-        font-size: 1.1rem;
-    }
-
-    .speaker-info p {
-        font-size: 1rem;
-    }
-
-    /* Article Cards */
-    .article-image {
-        height: 200px;
-    }
-
-    .article-info {
-        padding: 1.2rem 1.5rem;
-    }
-
-    .article-info h4 {
-        font-size: 1.2rem;
-    }
-
-    .article-publisher {
-        font-size: 0.9rem;
-    }
-}
-
-/* ============================================
-   TABLET RESPONSIVE STYLES - 1024px
-   ============================================ */
-
-@media (max-width: 1024px) {
-
-    /* Grid Items */
-    .grid-item-title {
-        font-size: 1.7rem;
-    }
-
-    .grid-item-subtitle {
-        font-size: 1rem;
-    }
-
-    .grid-item {
-        padding: 2rem;
     }
 }
