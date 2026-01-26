@@ -171,6 +171,10 @@ p a:hover {
     color: #ffffff;
 }
 
+.navbar.scrolled .nav-page-title {
+    color: #ffffff;
+}
+
 .navbar.scrolled .nav-menu a:hover {
     color: var(--color-primary-blue);
 }
@@ -196,7 +200,7 @@ p a:hover {
 
 /* Hero Section */
 .hero {
-    padding: 3rem 0 4rem;
+    padding: 6rem 0 4rem;
     background: transparent;
     position: relative;
     overflow: visible;
@@ -264,7 +268,7 @@ p a:hover {
     transition: all 0.3s ease;
     border: 3px solid transparent;
     cursor: pointer;
-    min-width: 200px;
+    width: 320px;
     max-height: 70px;
     text-align: center;
     white-space: nowrap;
@@ -280,9 +284,7 @@ p a:hover {
 /* Dropdown Order Button Styles */
 .dropdown-order-button {
     position: relative;
-    flex: 1;
-    min-width: 200px;
-    max-width: none;
+    width: 320px;
     z-index: 100;
 }
 
@@ -834,94 +836,6 @@ html {
     scroll-behavior: smooth;
 }
 
-/* Responsive Design */
-@media (max-width: 768px) {
-    .container {
-        padding: 0 20px;
-    }
-
-    .nav-menu {
-        justify-content: center;
-        gap: 1.5rem;
-        font-size: 0.9rem;
-    }
-
-    .hero {
-        padding: 4rem 0 5rem;
-    }
-
-    .hero-content,
-    .section-content {
-        flex-direction: column;
-        text-align: center;
-        gap: 3rem;
-    }
-
-    .hero-text h1 {
-        font-size: 2.5rem;
-    }
-
-    .hero-text h2 {
-        font-size: 1.8rem;
-    }
-
-    .section-text h2 {
-        font-size: 2rem;
-    }
-
-    .section-text p {
-        font-size: 1.1rem;
-    }
-
-    .book-cover img {
-        width: 280px;
-    }
-
-    .author-photo,
-    .book-info {
-        width: 100%;
-        max-width: 320px;
-        height: 320px;
-    }
-
-    .forms-container {
-        grid-template-columns: 1fr;
-        gap: 2rem;
-    }
-
-    .community-form-wrapper {
-        padding: 2rem 1.5rem;
-    }
-
-    .form-row {
-        grid-template-columns: 1fr;
-        gap: 1rem;
-    }
-
-    .form-title {
-        font-size: 2rem;
-    }
-
-    section {
-        padding: 4rem 0;
-    }
-}
-
-@media (max-width: 480px) {
-    .hero-text h1 {
-        font-size: 2rem;
-    }
-
-    .hero-text h2 {
-        font-size: 1.5rem;
-    }
-
-    .cta-button {
-        padding: 0.9rem 2rem;
-        font-size: 1rem;
-    }
-}
-
 /* ========================================
    DIVE DEEPER PAGE STYLES
    ======================================== */
@@ -935,7 +849,7 @@ html {
 .chapters-container {
     max-width: 1400px;
     margin: 0 auto;
-    padding: 0 20px;
+    padding: 40px 20px;
 }
 
 .chapters-title {
@@ -1382,64 +1296,6 @@ html {
     gap: 2rem;
 }
 
-/* Responsive for Dive Deeper page */
-@media (max-width: 768px) {
-    .chapters-grid {
-        grid-template-columns: repeat(2, 1fr);
-    }
-
-    .chapters-title {
-        font-size: 2.5rem;
-    }
-
-    .workshop-content h2 {
-        font-size: 2.5rem;
-    }
-
-    .order-content {
-        flex-direction: column;
-        gap: 2rem;
-    }
-
-    .order-book-section .book-cover img {
-        width: 300px;
-    }
-}
-
-@media (max-width: 480px) {
-    .chapters-grid {
-        grid-template-columns: 1fr;
-    }
-
-    .chapter-tile {
-        padding: 2rem 1.5rem;
-    }
-
-    .workshop-content h2 {
-        font-size: 2rem;
-    }
-
-    .workshop-content p {
-        font-size: 1rem;
-    }
-
-    /* Article preview card responsive */
-    .article-image {
-        height: 200px;
-    }
-
-    .article-info {
-        padding: 1.2rem 1.5rem;
-    }
-
-    .article-info h4 {
-        font-size: 1.2rem;
-    }
-
-    .article-publisher {
-        font-size: 0.9rem;
-    }
-}
 
 /* ================== ABOUT THE BOOK PAGE ================== */
 .about-page {
@@ -1669,108 +1525,6 @@ html {
     color: var(--color-primary-blue);
 }
 
-/* Responsive Styles for Speaking Page */
-@media (max-width: 768px) {
-    .nav-with-title {
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 1rem;
-    }
-
-    .nav-page-title {
-        font-size: 1.1rem;
-    }
-
-    .speaking-hero h1 {
-        font-size: 2.5rem;
-    }
-
-    .hero-subtitle {
-        font-size: 1.1rem;
-    }
-
-    .speaker-card-full {
-        flex-direction: column;
-        gap: 1.5rem;
-    }
-
-    .about-speaker-card {
-        flex-direction: column;
-        gap: 1.5rem;
-    }
-
-    .about-speaker-card .speaker-image-block {
-        width: 100%;
-        min-width: unset;
-    }
-
-    .speakers-grid {
-        grid-template-columns: 1fr;
-        gap: 2.5rem;
-    }
-
-    .cta-grid {
-        grid-template-columns: 1fr;
-        gap: 1.5rem;
-    }
-
-    .cta-box {
-        padding: 2.5rem 2rem;
-        min-height: 150px;
-    }
-
-    .cta-box p {
-        font-size: 1.2rem;
-    }
-
-    .makeover-grid {
-        grid-template-columns: 1fr;
-        gap: 2.5rem;
-    }
-
-    .makeover-title {
-        font-size: 2rem;
-    }
-
-    .makeover-label {
-        font-size: 1.5rem;
-    }
-}
-
-@media (max-width: 480px) {
-    .speaking-hero {
-        padding: 4rem 0 3rem;
-    }
-
-    .speaking-hero h1 {
-        font-size: 2rem;
-    }
-
-    .hero-subtitle {
-        font-size: 1rem;
-    }
-
-    .speaker-color-block h3 {
-        font-size: 1.5rem;
-    }
-
-    .speaker-info h4 {
-        font-size: 1.1rem;
-    }
-
-    .speaker-info p {
-        font-size: 1rem;
-    }
-
-    .cta-box {
-        padding: 2rem 1.5rem;
-        min-height: 130px;
-    }
-
-    .cta-box p {
-        font-size: 1.1rem;
-    }
-}
 
 /* ========================================
    Grid Layout Styles (Chapter Pages)
@@ -1912,49 +1666,6 @@ html {
     transform: translate(-50%, -50%) scale(1.1);
 }
 
-/* Responsive Design */
-@media (max-width: 1024px) {
-    .grid-item-title {
-        font-size: 1.7rem;
-    }
-
-    .grid-item-subtitle {
-        font-size: 1rem;
-    }
-
-    .grid-item {
-        padding: 2rem;
-    }
-}
-
-@media (max-width: 768px) {
-    .chapter-grid {
-        grid-template-columns: 1fr;
-        height: auto;
-        max-height: none;
-    }
-
-    .grid-item-large {
-        grid-row: auto;
-        min-height: 400px;
-    }
-
-    .grid-item-group {
-        grid-template-rows: auto;
-    }
-
-    .grid-item-medium {
-        min-height: 350px;
-    }
-
-    .grid-item-title {
-        font-size: 1.5rem;
-    }
-
-    .grid-item {
-        padding: 2rem 1.5rem;
-    }
-}
 
 /* Food page 2-column grid */
 .food-grid {
@@ -2078,11 +1789,218 @@ html {
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
 }
 
+/* ============================================
+   MOBILE RESPONSIVE STYLES - 768px
+   ============================================ */
+
 @media (max-width: 768px) {
+
+    /* General Layout & Container */
+    .container {
+        padding: 0 20px;
+    }
+
+    section {
+        padding: 4rem 0;
+    }
+
+    /* Navigation */
+    .nav-menu {
+        justify-content: center;
+        gap: 1.5rem;
+        font-size: 0.9rem;
+    }
+
+    .nav-with-title {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 1rem;
+    }
+
+    .nav-page-title {
+        font-size: 1.1rem;
+    }
+
+    /* Hero Sections */
+    .hero {
+        padding: 4rem 0 5rem;
+    }
+
+    .hero-content,
+    .section-content {
+        flex-direction: column;
+        text-align: center;
+        gap: 3rem;
+    }
+
+    .hero-text h1 {
+        font-size: 2.5rem;
+    }
+
+    .hero-text h2 {
+        font-size: 1.8rem;
+    }
+
+    .speaking-hero h1 {
+        font-size: 2.5rem;
+    }
+
+    .hero-subtitle {
+        font-size: 1.1rem;
+    }
+
+    /* Buttons */
+    .hero-buttons {
+        justify-content: center;
+    }
+
+    /* Typography */
+    .section-text h2 {
+        font-size: 2rem;
+    }
+
+    .section-text p {
+        font-size: 1.1rem;
+    }
+
+    .chapters-title {
+        font-size: 2.5rem;
+    }
+
+    .workshop-content h2 {
+        font-size: 2.5rem;
+    }
+
+    .makeover-title {
+        font-size: 2rem;
+    }
+
+    .makeover-label {
+        font-size: 1.5rem;
+    }
+
+    /* Book & Images */
+    .book-cover img {
+        width: 280px;
+    }
+
+    .order-book-section .book-cover img {
+        width: 300px;
+    }
+
+    .author-photo,
+    .book-info {
+        width: 100%;
+        max-width: 320px;
+        height: 320px;
+    }
+
+    /* Grid Layouts */
+    .chapters-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .speakers-grid {
+        grid-template-columns: 1fr;
+        gap: 2.5rem;
+    }
+
+    .cta-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+
+    .makeover-grid {
+        grid-template-columns: 1fr;
+        gap: 2.5rem;
+    }
+
     .food-grid {
         grid-template-columns: 1fr !important;
     }
 
+    .chapter-grid {
+        grid-template-columns: 1fr !important;
+        height: auto;
+        max-height: none;
+    }
+
+    .grid-item-large {
+        grid-row: auto;
+        min-height: 400px;
+    }
+
+    .grid-item-group {
+        grid-template-rows: auto;
+    }
+
+    .grid-item-medium {
+        min-height: 350px;
+    }
+
+    .grid-item-title {
+        font-size: 1.5rem;
+    }
+
+    .grid-item {
+        padding: 2rem 1.5rem;
+    }
+
+    /* Speaker Cards */
+    .speaker-card-full {
+        flex-direction: column;
+        gap: 1.5rem;
+    }
+
+    .about-speaker-card {
+        flex-direction: column;
+        gap: 1.5rem;
+    }
+
+    .about-speaker-card .speaker-image-block {
+        width: 100%;
+        min-width: unset;
+    }
+
+    /* CTA Boxes */
+    .cta-box {
+        padding: 2.5rem 2rem;
+        min-height: 150px;
+    }
+
+    .cta-box p {
+        font-size: 1.2rem;
+    }
+
+    /* Forms */
+    .forms-container {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+        justify-items: center;
+    }
+
+    .community-form-wrapper {
+        padding: 1.5rem 1.5rem;
+        max-width: 600px;
+        width: 100%;
+    }
+
+    .form-row {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+
+    .form-title {
+        font-size: 2rem;
+    }
+
+    /* Order Content */
+    .order-content {
+        flex-direction: column;
+        gap: 2rem;
+    }
+
+    /* Flip Container & Modal */
     .flip-container {
         max-width: 100%;
     }
@@ -2091,8 +2009,118 @@ html {
         top: -30px;
         font-size: 30px;
     }
+}
 
-    .chapter-grid {
-        grid-template-columns: 1fr !important;
+/* ============================================
+   MOBILE RESPONSIVE STYLES - 480px
+   ============================================ */
+
+@media (max-width: 480px) {
+
+    /* Hero Text Sizing */
+    .hero-text h1 {
+        font-size: 2rem;
+    }
+
+    .hero-text h2 {
+        font-size: 1.5rem;
+    }
+
+    .speaking-hero {
+        padding: 4rem 0 3rem;
+    }
+
+    .speaking-hero h1 {
+        font-size: 2rem;
+    }
+
+    .hero-subtitle {
+        font-size: 1rem;
+    }
+
+    /* Buttons */
+    .hero-buttons {
+        justify-content: center;
+    }
+
+    .cta-button {
+        padding: 0.9rem 2rem;
+        font-size: 1rem;
+    }
+
+    .cta-box {
+        padding: 2rem 1.5rem;
+        min-height: 130px;
+    }
+
+    .cta-box p {
+        font-size: 1.1rem;
+    }
+
+    /* Chapters & Workshop */
+    .chapters-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .chapter-tile {
+        padding: 2rem 1.5rem;
+    }
+
+    .workshop-content h2 {
+        font-size: 2rem;
+    }
+
+    .workshop-content p {
+        font-size: 1rem;
+    }
+
+    /* Speaker Content */
+    .speaker-color-block h3 {
+        font-size: 1.5rem;
+    }
+
+    .speaker-info h4 {
+        font-size: 1.1rem;
+    }
+
+    .speaker-info p {
+        font-size: 1rem;
+    }
+
+    /* Article Cards */
+    .article-image {
+        height: 200px;
+    }
+
+    .article-info {
+        padding: 1.2rem 1.5rem;
+    }
+
+    .article-info h4 {
+        font-size: 1.2rem;
+    }
+
+    .article-publisher {
+        font-size: 0.9rem;
+    }
+}
+
+/* ============================================
+   TABLET RESPONSIVE STYLES - 1024px
+   ============================================ */
+
+@media (max-width: 1024px) {
+
+    /* Grid Items */
+    .grid-item-title {
+        font-size: 1.7rem;
+    }
+
+    .grid-item-subtitle {
+        font-size: 1rem;
+    }
+
+    .grid-item {
+        padding: 2rem;
     }
 }
