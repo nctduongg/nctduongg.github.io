@@ -125,6 +125,7 @@ p a:hover {
     max-width: 1200px;
     margin: 0 auto;
     padding: 0 40px;
+    width: 100%;
 }
 
 /* Navigation */
@@ -641,7 +642,7 @@ section {
 .reviews-track {
     display: flex;
     gap: 1rem;
-    animation: scroll-reviews 40s linear infinite;
+    animation: scroll-reviews 50s linear infinite;
     width: max-content;
 }
 
@@ -718,6 +719,7 @@ section {
     grid-template-columns: 1fr;
     gap: 2rem;
     max-width: 1400px;
+    width: 100%;
     margin: 0 auto;
     align-items: start;
 }
@@ -729,6 +731,9 @@ section {
     box-shadow: 0 20px 60px rgba(0, 0, 0, 0.15);
     position: relative;
     z-index: 1;
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
 }
 
 .form-title {
@@ -1829,9 +1834,21 @@ html {
 }
 
 /* ============================================
-   MOBILE RESPONSIVE STYLES - 768px
+   RESPONSIVE STYLES
    ============================================ */
 
+/* Tablet adjustments */
+@media (max-width: 1024px) {
+    .container {
+        padding: 0 30px;
+    }
+
+    .community-form-wrapper {
+        padding: 2rem;
+    }
+}
+
+/* Mobile adjustments - 768px */
 @media (max-width: 768px) {
 
     /* General Layout & Container */
@@ -1846,7 +1863,7 @@ html {
     }
 
     .container {
-        padding: 0 20px;
+        padding: 0 10px;
     }
 
     section {
