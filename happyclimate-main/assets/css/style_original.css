@@ -56,7 +56,9 @@ h6 {
 }
 
 .book-image-link {
-  display: inline-block;
+  display: block;
+  width: fit-content;
+  margin: 0 auto;
   transition: transform 0.3s ease;
 }
 

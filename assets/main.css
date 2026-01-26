@@ -2120,7 +2120,7 @@ html {
     /* Speaker Section */
     .speaker-section-individual>p {
         padding: 0 30px 3rem;
-        text-align: justify;
+        text-align: center;
         font-size: 1.2rem;
     }
 
