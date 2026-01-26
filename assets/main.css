@@ -539,6 +539,7 @@ section {
     line-height: 1.7;
     color: var(--color-text-primary);
     margin-bottom: 1rem;
+    text-align: justify;
 }
 
 .overview-content h3 {
@@ -562,6 +563,7 @@ section {
     margin-bottom: 0.8rem;
     padding-left: 1.8rem;
     position: relative;
+    text-align: justify;
 }
 
 .discovery-list li::before {
@@ -1057,7 +1059,7 @@ html {
 
 /* Chapter Pages */
 .chapter-hero {
-    padding: 6rem 0 5rem;
+    padding: 3rem 0 2rem;
     background: transparent;
     text-align: center;
     position: relative;
@@ -1303,7 +1305,7 @@ html {
 
 /* Order Book Section */
 .order-book-section {
-    padding: 5rem 0;
+    padding: 2rem 0;
     background: transparent;
 }
 
@@ -1999,23 +2001,31 @@ html {
     .book-info {
         width: 100%;
         max-width: 450px;
-        height: 450px;
+        max-height: 450px;
         margin: 0 auto;
     }
 
-    /* Grid Layouts */
+    .overview-content h2 {
+        font-size: 2rem;
+    }
+
+    /* dive deeper page */
+    .chapter-content h3 {
+        font-size: 1.6rem;
+    }
+
     .chapters-grid {
         grid-template-columns: repeat(2, 1fr);
+    }
+
+    .chapter-tile {
+        height: auto;
+        aspect-ratio: 1;
     }
 
     .speakers-grid {
         grid-template-columns: 1fr;
         gap: 2.5rem;
-    }
-
-    .cta-grid {
-        grid-template-columns: 1fr;
-        gap: 1.5rem;
     }
 
     .makeover-grid {
@@ -2028,9 +2038,15 @@ html {
     }
 
     .chapter-grid {
-        grid-template-columns: 1fr !important;
+        grid-template-columns: repeat(2, 1fr) !important;
         height: auto;
         max-height: none;
+    }
+
+    /* Last item spans both columns if odd number of items */
+    .chapter-grid .grid-item:nth-child(odd):last-child {
+        grid-column: span 2;
+        aspect-ratio: 2/1;
     }
 
     .grid-item-large {
@@ -2047,11 +2063,33 @@ html {
     }
 
     .grid-item-title {
-        font-size: 1.5rem;
+        font-size: 1rem;
+    }
+
+    .grid-item-subtitle {
+        font-size: 0.6rem;
     }
 
     .grid-item {
-        padding: 2rem 1.5rem;
+        padding: 1rem;
+        aspect-ratio: 1;
+        height: auto;
+        min-height: auto;
+    }
+
+    .video-play-button {
+        width: 50px;
+        height: 50px;
+        background: rgba(233, 232, 232, 0.5);
+    }
+
+    .video-play-button::before {
+        border-width: 10px 0 10px 17px;
+    }
+
+    .grid-item:hover .video-play-button {
+        background: rgba(233, 232, 232, 0.5);
+        transform: translate(-50%, -50%) scale(1.1);
     }
 
     /* Speaker Cards */
@@ -2068,6 +2106,23 @@ html {
     .about-speaker-card .speaker-image-block {
         width: 100%;
         min-width: unset;
+    }
+
+    /* Speaker Section */
+    .speaker-section-individual>p {
+        padding: 0 30px 3rem;
+        text-align: justify;
+        font-size: 1.2rem;
+    }
+
+    /* Speaker Section */
+    .speaker-section-individual .email-address{
+        font-size: 1rem;
+    }
+
+    .speaker-image-block {
+        max-width: 280px;
+        margin: 0 auto;
     }
 
     /* CTA Boxes */
@@ -2091,6 +2146,7 @@ html {
         padding: 1.5rem 1.5rem;
         max-width: 600px;
         width: 100%;
+        margin-right: 5px;
     }
 
     .form-row {
