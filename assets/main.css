@@ -495,7 +495,7 @@ section {
 
 /* Book Overview Section */
 .book-overview {
-    background-color: transparent;
+    background-color: #FAFDF9;
     padding: var(--spacing-lg) 0;
     backdrop-filter: blur(10px);
 }
@@ -642,7 +642,7 @@ section {
 .reviews-track {
     display: flex;
     gap: 1rem;
-    animation: scroll-reviews 50s linear infinite;
+    animation: scroll-reviews 60s linear infinite;
     width: max-content;
 }
 
@@ -2183,5 +2183,24 @@ html {
     .fridge-modal-close {
         top: -30px;
         font-size: 30px;
+    }
+
+    /* Review Cards */
+    .review-card {
+        min-width: 280px;
+        max-width: 320px;
+        padding: 1.5rem;
+    }
+
+    .review-card .review-text {
+        font-size: 0.95rem;
+    }
+
+    .review-card .review-source {
+        font-size: 0.9rem;
+    }
+
+    .review-card .review-credentials {
+        font-size: 0.75rem;
     }
 }
