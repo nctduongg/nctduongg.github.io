@@ -141,8 +141,40 @@ h6 {
 }
 
 #header.header-scrolled {
-  background: rgba(55, 142, 181, 0.9);
+  background: transparent;
   padding: 12px;
+}
+
+#header.header-scrolled .navbar a,
+#header.header-scrolled .navbar a:focus {
+  color: #378eb5;
+}
+
+#header.header-scrolled .mobile-nav-toggle {
+  color: #378eb5;
+}
+
+/* Page-specific header text colors */
+.page-index #header .navbar a,
+.page-index #header .navbar a:focus,
+.page-index #header .mobile-nav-toggle {
+  color: #fff;
+}
+
+.page-workshop #header .navbar a,
+.page-workshop #header .navbar a:focus,
+.page-workshop #header .mobile-nav-toggle {
+  color: #378eb5;
+}
+
+.page-workshop #header.header-scrolled {
+  background: rgba(255, 255, 255, 0.75);
+}
+
+.page-workshop #header.header-scrolled .navbar a,
+.page-workshop #header.header-scrolled .navbar a:focus,
+.page-workshop #header.header-scrolled .mobile-nav-toggle {
+  color: #378eb5;
 }
 
 #header .logo h1 {
@@ -170,6 +202,10 @@ h6 {
 @media (max-width: 768px) {
   #header.header-scrolled {
     padding: 15px 0;
+  }
+
+  #header.header-scrolled .mobile-nav-toggle {
+    color: #378eb5;
   }
 }
 
