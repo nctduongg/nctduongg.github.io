@@ -1,0 +1,9 @@
+# Allow all search engines to crawl the entire site
+User-agent: *
+Allow: /
+
+# Sitemap location
+Sitemap: https://happyclimate.org/sitemap.xml
+
+# Optional: Crawl delay (uncomment if you want to be polite to bots)
+Crawl-delay: 1

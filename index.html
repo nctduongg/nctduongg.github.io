@@ -4,7 +4,38 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Leave the Lights On</title>
+    <title>Leave the Lights On by Elizabeth Dunn and Jiaying Zhao</title>
+
+    <!-- Meta Description (appears in search results) -->
+    <meta name="description"
+        content="What if the most effective ways to fight climate change made you happy? Psychologist Elizabeth Dunn and climate behavior scientist Jiaying Zhao challenge everything we think we know about sustainable living.">
+
+    <!-- Canonical URL (prevents duplicate content issues) -->
+    <link rel="canonical" href="https://happyclimate.org/">
+
+    <!-- Open Graph tags (for Facebook, LinkedIn sharing) -->
+    <meta property="og:type" content="book">
+    <meta property="og:title" content="Leave the Lights On - Make Climate Action Joyful">
+    <meta property="og:description"
+        content="What if the most effective ways to fight climate change made you happy? Psychologist Elizabeth Dunn and climate behavior scientist Jiaying Zhao challenge everything we think we know about sustainable living.">
+    <meta property="og:image" content="https://happyclimate.org/img/LeaveTheLightsOn_HC.png">
+    <meta property="og:url" content="https://happyclimate.org/">
+    <meta property="og:site_name" content="Leave the Lights On">
+
+    <!-- Twitter Card tags (for Twitter sharing) -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Leave the Lights On - Make Climate Action Joyful">
+    <meta name="twitter:description"
+        content="What if the most effective ways to fight climate change made you happy? Psychologist Elizabeth Dunn and climate behavior scientist Jiaying Zhao challenge everything we think we know about sustainable living.">
+    <meta name="twitter:image" content="https://happyclimate.org/img/LeaveTheLightsOn_HC.png">
+
+    <!-- Keywords (less important but still useful) -->
+    <meta name="keywords"
+        content="climate change, sustainability, happiness, environmental psychology, Elizabeth Dunn, Jiaying Zhao, climate action, sustainable living">
+
+    <!-- Author -->
+    <meta name="author" content="Elizabeth Dunn and Jiaying Zhao">
+
     <link rel="icon" type="image/png" href="img/LeaveTheLightsOn_HC.png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -19,6 +50,50 @@
             // Replace 'YOUR_PUBLIC_KEY' with your EmailJS public key
             emailjs.init('q_INtuKTZS9yWRGmt');
         })();
+    </script>
+
+    <!-- Structured Data (JSON-LD) for Google rich snippets -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Book",
+      "name": "Leave the Lights On",
+      "author": [
+        {
+          "@type": "Person",
+          "name": "Elizabeth Dunn",
+          "affiliation": "University of British Columbia",
+          "url": "https://dunn.psych.ubc.ca/"
+        },
+        {
+          "@type": "Person",
+          "name": "Jiaying Zhao",
+          "affiliation": "University of British Columbia",
+          "url": "https://zhaolab.psych.ubc.ca/"
+        }
+      ],
+      "about": "How to make an impact on climate change by taking actions that bring you joy",
+      "genre": ["Psychology", "Environmental Science", "Self-Help"],
+      "publisher": {
+        "@type": "Organization",
+        "name": "Penguin Random House"
+      },
+      "bookFormat": "https://schema.org/Hardcover",
+      "isbn": "9780593853276",
+      "image": "https://happyclimate.org/img/LeaveTheLightsOn_HC.png",
+      "url": "https://happyclimate.org/",
+      "potentialAction": {
+        "@type": "ReadAction",
+        "target": {
+          "@type": "EntryPoint",
+          "urlTemplate": "https://www.penguinrandomhouse.com/books/773541/leave-the-lights-on-by-elizabeth-dunn-and-jiaying-zhao/",
+          "actionPlatform": [
+            "http://schema.org/DesktopWebPlatform",
+            "http://schema.org/MobileWebPlatform"
+          ]
+        }
+      }
+    }
     </script>
 </head>
 
