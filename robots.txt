@@ -2,6 +2,9 @@
 User-agent: *
 Allow: /
 
+# Block duplicate/old content folders
+Disallow: /happyclimate-main/
+
 # Sitemap location
 Sitemap: https://happyclimate.org/sitemap.xml
 
