@@ -493,6 +493,25 @@ section {
     margin-bottom: 0;
 }
 
+/* Author Video Section */
+.author-video-section {
+    background-color: #ffffff;
+    padding: 4rem 0 2rem 0;
+}
+
+.video-container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.video-container video {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
 /* Book Overview Section */
 .book-overview {
     background-color: #FAFDF9;
@@ -2007,6 +2026,15 @@ html {
         margin: 0 auto;
     }
 
+    /* Video Section */
+    .author-video-section {
+        padding: 3rem 0 1.5rem 0;
+    }
+
+    .video-container {
+        padding: 0 20px;
+    }
+
     .book-info {
         width: 100%;
         max-width: 450px;
@@ -2016,6 +2044,10 @@ html {
 
     .overview-content h2 {
         font-size: 2rem;
+    }
+
+    .book-overview {
+        padding: 1rem 0 4rem 0;
     }
 
     /* dive deeper page */

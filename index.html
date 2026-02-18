@@ -148,6 +148,18 @@
         </div>
     </section>
 
+    <!-- Author Video Section -->
+    <section class="author-video-section">
+        <div class="container">
+            <div class="video-container">
+                <video id="author-video" controls autoplay muted loop playsinline preload="metadata">
+                    <source src="img/UC2523_Leave_The_Lights_On_Book_Promo_V4_RAF (1).mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            </div>
+        </div>
+    </section>
+
     <!-- Book Overview Section -->
     <section id="book-overview" class="book-overview">
         <div class="container">
@@ -447,6 +459,26 @@
 
     <script src="assets/main.js"></script>
     <script src="assets/forms.js"></script>
+    <script>
+        // Allow video to be unmuted by user interaction
+        document.addEventListener('DOMContentLoaded', function () {
+            const video = document.getElementById('author-video');
+            if (video) {
+                // Allow unmuting via click
+                video.addEventListener('click', function () {
+                    if (video.muted) {
+                        video.muted = false;
+                    }
+                });
+                // Allow volume control to unmute
+                video.addEventListener('volumechange', function () {
+                    if (video.volume > 0) {
+                        video.muted = false;
+                    }
+                });
+            }
+        });
+    </script>
 </body>
 
 </html>
