@@ -14,6 +14,7 @@ document.addEventListener('DOMContentLoaded', function () {
     const navMenu = document.querySelector('.nav-menu');
     const mobileOverlay = document.querySelector('.mobile-menu-overlay');
     const body = document.body;
+    const revealItems = document.querySelectorAll('.reveal-on-scroll');
 
     if (hamburger) {
         hamburger.addEventListener('click', function () {
@@ -44,6 +45,26 @@ document.addEventListener('DOMContentLoaded', function () {
             body.classList.remove('menu-open');
         });
     });
+
+    if (revealItems.length) {
+        if ('IntersectionObserver' in window) {
+            const revealObserver = new IntersectionObserver((entries, observer) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('is-visible');
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, {
+                threshold: 0.15,
+                rootMargin: '0px 0px -8% 0px'
+            });
+
+            revealItems.forEach(item => revealObserver.observe(item));
+        } else {
+            revealItems.forEach(item => item.classList.add('is-visible'));
+        }
+    }
 });
 
 // Fridge Modal Functions

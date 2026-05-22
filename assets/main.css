@@ -1481,6 +1481,38 @@ html {
     backdrop-filter: blur(10px);
 }
 
+.media-photos-section {
+    padding: 4rem 0;
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(10px);
+    text-align: center;
+}
+
+.media-photos-section p {
+    font-size: 1.8rem;
+}
+
+.reveal-on-scroll {
+    opacity: 0;
+    transform: translateY(32px);
+    transition: opacity 0.75s ease, transform 0.75s ease;
+    will-change: opacity, transform;
+}
+
+.reveal-on-scroll.is-visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .reveal-on-scroll {
+        opacity: 1;
+        transform: none;
+        transition: none;
+        will-change: auto;
+    }
+}
+
 .first-section {
     padding-top: 100px;
 }
@@ -1559,6 +1591,107 @@ html {
     gap: 3rem;
     max-width: 1200px;
     margin: 0 auto;
+}
+
+.photos-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 3rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.photos-instruction {
+    text-align: center;
+    font-size: 1.6rem;
+    margin: 3rem 0;
+    color: var(--color-text-secondary);
+}
+
+.photos-credit {
+    text-align: center;
+    font-size: 1.2rem;
+    margin: 3rem 0 0;
+    color: var(--color-text-secondary);
+}
+
+.photo-card {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    text-align: center;
+}
+
+.photo-thumbnail {
+    width: 100%;
+    aspect-ratio: 1;
+    overflow: hidden;
+    border-radius: var(--radius-sm);
+    box-shadow: var(--shadow-md);
+}
+
+.photo-thumbnail a {
+    display: block;
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.photo-thumbnail a:hover {
+    transform: scale(1.05);
+}
+
+.photo-thumbnail img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.photos-grid .photo-card:nth-child(n+5) .photo-thumbnail {
+    box-shadow: none;
+    background: transparent;
+}
+
+.photos-grid .photo-card:nth-child(5) .photo-thumbnail {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
+    box-sizing: border-box;
+}
+
+.photos-grid .photo-card:nth-child(5) .photo-thumbnail a {
+    width: auto;
+    height: auto;
+}
+
+.photos-grid .photo-card:nth-child(5) .photo-thumbnail img {
+    width: 85%;
+    height: 85%;
+    object-fit: contain;
+}
+
+.photo-info h4 {
+    margin-bottom: 0.5rem;
+}
+
+.photo-info p {
+    margin: 0;
+}
+
+.photo-info a {
+    color: var(--color-blue-dark);
+    text-decoration: underline;
+    text-decoration-color: rgba(67, 126, 142, 0.3);
+    text-decoration-thickness: 1.5px;
+    text-underline-offset: 2px;
+    transition: all 0.3s ease;
+}
+
+.photo-info a:hover {
+    color: var(--color-primary-blue);
+    text-decoration-color: var(--color-primary-blue);
 }
 
 .speaker-card {
