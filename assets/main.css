@@ -392,10 +392,11 @@ body.menu-open {
     transition: all 0.2s ease;
     font-weight: 600;
     font-size: 1.1rem;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.08);
 }
 
-.dropdown-item:first-child {
-    border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+.dropdown-item:last-child {
+    border-bottom: none;
 }
 
 .dropdown-item:hover {
