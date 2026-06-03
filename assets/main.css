@@ -2429,4 +2429,8 @@ html {
     .review-card .review-credentials {
         font-size: 0.75rem;
     }
+
+    .media-photos-section p {
+        font-size: 2rem;
+    }
 }
