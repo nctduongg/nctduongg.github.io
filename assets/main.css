@@ -430,39 +430,6 @@ body.menu-open {
     box-shadow: 0 8px 25px rgba(74, 144, 164, 0.4);
 }
 
-.hero-promo-text {
-    font-size: 2.1rem;
-    font-weight: 700;
-    color: #141414;
-    text-align: center;
-    line-height: 1.4;
-    max-width: 540px;
-    margin-bottom: -0.6rem;
-}
-
-.hero-promo-highlight {
-    color: #d7ad36;
-    font-weight: 800;
-}
-
-.cta-porchlight {
-    width: 450px;
-    max-height: 80px;
-    font-size: 1.75rem;
-    background: linear-gradient(135deg, #d7ad36 0%, #f0cf63 100%);
-    color: #f7f9fc !important;
-    border: 2px solid rgba(255, 255, 255, 0.15);
-    box-shadow: 0 6px 20px rgba(215, 173, 54, 0.4);
-    margin-bottom: 2rem;
-}
-
-.cta-porchlight:hover {
-    background: linear-gradient(135deg, #cba230 0%, #e8c456 100%);
-    color: #ffffff !important;
-    transform: translateY(-3px);
-    box-shadow: 0 8px 24px rgba(203, 162, 48, 0.45);
-}
-
 /* Section Styles */
 section {
     padding: var(--spacing-xl) 0;
