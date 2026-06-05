@@ -1826,7 +1826,142 @@ html {
     font-weight: 700;
     margin-bottom: 0.5rem;
     line-height: 1.2;
+}
+
+/* Media Page Widgets */
+.media-section {
+    padding: 3rem 0;
+    background: var(--color-white);
+}
+
+.media-section:first-of-type {
+    padding-top: 1.5rem;
+}
+
+.media-section-header {
+    max-width: 1440px;
+    margin: 0 auto 1.5rem;
+    padding: 0 80px;
+}
+
+.media-section-title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: var(--color-text-primary);
+    letter-spacing: -0.02em;
+    margin-bottom: 0.5rem;
+}
+
+.media-widget-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 1.5rem;
+    max-width: 1440px;
+    margin: 0 auto;
+    padding: 0 80px;
+}
+
+.media-widget-grid:has(.media-widget:nth-child(1):last-child) {
+    grid-template-columns: 1fr;
+}
+
+.media-widget-grid:has(.media-widget:nth-child(2):last-child) {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.media-widget {
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    align-items: flex-end;
+    padding: 1.75rem;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    border-radius: var(--radius-md);
+    min-height: 320px;
+    box-shadow: var(--shadow-md);
+}
+
+.media-widget:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-lg);
+}
+
+.media-widget-bg {
+    position: absolute;
+    inset: 0;
+    background-size: cover;
+    background-position: center;
+}
+
+.media-widget-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to top, rgba(27, 43, 47, 0.88) 0%, rgba(27, 43, 47, 0.56) 48%, rgba(27, 43, 47, 0.16) 100%);
+    transition: background 0.3s ease;
+}
+
+.media-widget:hover .media-widget-overlay {
+    background: linear-gradient(to top, rgba(27, 43, 47, 0.96) 0%, rgba(27, 43, 47, 0.66) 48%, rgba(27, 43, 47, 0.22) 100%);
+}
+
+.media-widget-content {
+    position: relative;
+    z-index: 2;
     color: white;
+    display: flex;
+    flex-direction: column;
+    gap: 0.65rem;
+    transition: transform 0.3s ease;
+}
+
+.media-widget:hover .media-widget-content {
+    transform: translateY(-8px);
+}
+
+.media-widget-badge {
+    display: inline-flex;
+    width: fit-content;
+    align-items: center;
+    justify-content: center;
+    padding: 0.35rem 0.8rem;
+    border-radius: 999px;
+    background: rgba(255, 255, 255, 0.2);
+    color: white;
+    font-size: 0.78rem;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+}
+
+.media-widget-meta {
+    font-size: 0.95rem;
+    color: rgba(255, 255, 255, 0.82);
+    font-weight: 600;
+}
+
+.media-widget-title {
+    font-family: var(--font-heading);
+    font-size: 1.45rem;
+    font-weight: 700;
+    line-height: 1.2;
+    color: white;
+}
+
+.media-widget-description {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: rgba(255, 255, 255, 0.92);
+    max-width: 32ch;
+}
+
+.media-widget:hover .media-widget-title {
+    color: white;
+}
+
+.media-widget:hover .media-widget-meta,
+.media-widget:hover .media-widget-description {
+    color: rgba(255, 255, 255, 0.96);
 }
 
 .grid-item-subtitle {
@@ -2008,7 +2143,7 @@ html {
 }
 
 /* Mobile adjustments - 768px */
-@media (max-width: 768px) {
+@media (max-width: 1024px) {
 
     /* General Layout & Container */
     .navbar {
@@ -2272,6 +2407,48 @@ html {
         font-size: 0.6rem;
     }
 
+    .media-section {
+        padding: 2rem 0;
+    }
+
+    .media-section-title {
+        font-size: 2rem;
+    }
+
+    .media-section-intro {
+        font-size: 1rem;
+    }
+
+    .media-section-header {
+        padding: 0 24px;
+    }
+
+    .media-widget-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        padding: 0 24px;
+    }
+
+    .media-widget-grid:has(.media-widget:nth-child(1):last-child) {
+        grid-template-columns: 1fr;
+    }
+
+    .media-widget-grid:has(.media-widget:nth-child(2):last-child) {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .media-widget {
+        min-height: 260px;
+        padding: 1.25rem;
+    }
+
+    .media-widget-title {
+        font-size: 1.15rem;
+    }
+
+    .media-widget-description {
+        font-size: 0.92rem;
+    }
+
     .grid-item {
         padding: 1rem;
         aspect-ratio: 1;
@@ -2308,6 +2485,10 @@ html {
     .about-speaker-card .speaker-image-block {
         width: 100%;
         min-width: unset;
+    }
+
+    .media-widget-grid {
+        grid-template-columns: 1fr;
     }
 
     /* Speaker Section */
