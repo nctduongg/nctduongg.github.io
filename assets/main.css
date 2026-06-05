@@ -124,7 +124,7 @@ p a:hover {
 .container {
     max-width: 1200px;
     margin: 0 auto;
-    padding: 0 40px;
+    padding: 0 0px;
     width: 100%;
 }
 
@@ -499,7 +499,7 @@ section {
 
 /* Author Video Section */
 .author-video-section {
-    background-color: #ffffff;
+    background-color: var(--color-background);
     padding: 4rem 0 2rem 0;
 }
 
@@ -618,7 +618,7 @@ section {
 }
 
 .reviews-section.about-page {
-    background: var(--color-white);
+    background: var(--color-background);
     backdrop-filter: none;
 }
 
@@ -1110,7 +1110,7 @@ html {
 /* Fridge Makeover Section */
 .fridge-makeover-section {
     padding: 5rem 0;
-    background: var(--color-white);
+    background: var(--color-background);
 }
 
 .makeover-title {
@@ -1162,7 +1162,7 @@ html {
 
 .chapter-content-section {
     padding: 1rem 0 1rem;
-    background: var(--color-white);
+    background: var(--color-background);
 }
 
 .chapter-text {
@@ -1366,7 +1366,87 @@ html {
 
 /* ================== ABOUT THE BOOK PAGE ================== */
 .about-page {
-    background: var(--color-white);
+    background: var(--color-background);
+}
+
+/* ================== HOMEPAGE MEDIA SECTION ================== */
+.home-media-section {
+    padding: 4rem 0;
+    background: var(--color-background);
+}
+
+.home-media-content {
+    max-width: 1440px;
+    margin: 0 auto;
+    padding: 0 40px;
+}
+
+.home-media-title {
+    text-align: center;
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: var(--color-text-primary);
+    margin-bottom: 2rem;
+    letter-spacing: -0.02em;
+}
+
+.home-media-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 1.5rem;
+}
+
+.home-media-widget {
+    position: relative;
+    display: block;
+    overflow: hidden;
+    min-height: 280px;
+    border-radius: var(--radius-md);
+    box-shadow: var(--shadow-md);
+    text-decoration: none;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.home-media-widget:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-lg);
+}
+
+.home-media-widget-bg {
+    position: absolute;
+    inset: 0;
+    background-size: cover;
+    background-position: center;
+}
+
+.home-media-widget-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to top, rgba(27, 43, 47, 0.78) 0%, rgba(27, 43, 47, 0.42) 55%, rgba(27, 43, 47, 0.2) 100%);
+}
+
+.home-media-widget-content {
+    position: absolute;
+    bottom: 1rem;
+    left: 1rem;
+    z-index: 2;
+}
+
+.home-media-see-all {
+    display: flex;
+    width: fit-content;
+    align-items: center;
+    gap: 0.4rem;
+    margin: 2rem auto 0;
+    font-size: 1.45rem;
+    font-weight: 800;
+    line-height: 1;
+    color: var(--color-blue-dark);
+    text-decoration: none;
+}
+
+.home-media-see-all:hover {
+    color: var(--color-primary-blue);
 }
 
 /* ================== SPEAKING PAGE STYLES ================== */
@@ -1616,6 +1696,10 @@ html {
     object-fit: cover;
 }
 
+.shift-up img {
+    object-position: center 90%;
+}
+
 .photos-grid .photo-card:nth-child(n+7) .photo-thumbnail {
     box-shadow: none;
     background: transparent;
@@ -1831,7 +1915,7 @@ html {
 /* Media Page Widgets */
 .media-section {
     padding: 3rem 0;
-    background: var(--color-white);
+    background: var(--color-background);
 }
 
 .media-section:first-of-type {
@@ -2411,6 +2495,22 @@ html {
         padding: 2rem 0;
     }
 
+    .home-media-content {
+        padding: 0 40px;
+    }
+
+    .home-media-title {
+        font-size: 2rem;
+    }
+
+    .home-media-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .home-media-widget {
+        min-height: 240px;
+    }
+
     .media-section-title {
         font-size: 2rem;
     }
@@ -2488,6 +2588,10 @@ html {
     }
 
     .media-widget-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .home-media-grid {
         grid-template-columns: 1fr;
     }
 
