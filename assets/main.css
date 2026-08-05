@@ -928,6 +928,19 @@ html {
     letter-spacing: -0.02em;
 }
 
+.chapter-banner {
+    display: block;
+    width: 100%;
+    height: 130px;
+    margin-bottom: 2rem;
+    border-radius: 18px;
+}
+
+.chapter-banner .chapter-content h3 {
+    font-size: 3.5rem;
+}
+
+
 .chapters-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -2433,6 +2446,14 @@ html {
     /* dive deeper page */
     .chapter-content h3 {
         font-size: 1.6rem;
+    }
+
+    .chapter-banner {
+        height: 110px;
+    }
+
+    .chapter-banner h3 {
+        font-size: 2rem;
     }
 
     .chapters-grid {
