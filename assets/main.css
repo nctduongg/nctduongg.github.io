@@ -931,7 +931,7 @@ html {
 .chapter-banner {
     display: block;
     width: 100%;
-    height: 130px;
+    height: 160px !important;
     margin-bottom: 2rem;
     border-radius: 18px;
 }
@@ -2452,9 +2452,9 @@ html {
         height: 110px;
     }
 
-    .chapter-banner h3 {
-        font-size: 2rem;
-    }
+    .chapter-banner .chapter-content h3 {
+    font-size: 2.5rem;
+}
 
     .chapters-grid {
         grid-template-columns: repeat(2, 1fr);
